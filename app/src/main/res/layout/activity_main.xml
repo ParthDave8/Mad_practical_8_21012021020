@@ -6,99 +6,160 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Mad_Alarm_Practical"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/m1"
-        android:layout_width="359dp"
-        android:layout_height="317dp"
+        android:id="@+id/set_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
         android:layout_margin="20dp"
-        android:backgroundTint="#80aaff"
+        android:backgroundTint="#ccddff"
         android:elevation="20dp"
         app:cardCornerRadius="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.103">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
-            android:layout_marginTop="160dp"
-            android:text="Create Alarm time"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/create"
-            android:layout_width="173dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="4dp"
-            android:text="@string/parth"
-            app:icon="@drawable/baseline_add_24"></com.google.android.material.button.MaterialButton>
+        app:layout_constraintVertical_bias="0.112">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="158dp"
-            android:background="@color/black"
-            android:backgroundTint="@color/white"
+            android:layout_height="157dp"
+            android:scaleType="fitCenter"
+            android:background="@color/white"
             app:srcCompat="@drawable/alaram" />
 
-    </com.google.android.material.card.MaterialCardView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="16dp"
-        android:text="MAD Alaram practical"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialcard2"
-        android:layout_width="359dp"
-        android:layout_height="317dp"
-        android:layout_margin="20dp"
-        android:backgroundTint="#80aaff"
-        android:elevation="20dp"
-        android:visibility="invisible"
-        app:cardCornerRadius="40dp"
-        app:layout_constraintTop_toBottomOf="@+id/m1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
         <TextView
-            android:id="@+id/textView1"
             android:layout_width="wrap_content"
-            android:layout_height="38dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="160dp"
-            android:text="Create Alarm time"
+            android:text="Create Alarm Time"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alarm_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"/>
+        <TextView
+            android:id="@+id/c_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
             android:textSize="20dp"
             android:textStyle="bold" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="173dp"
+            android:id="@+id/Alarm_set"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_marginStart="20dp"
-            android:layout_marginBottom="4dp"
-            android:text="@string/parth"
-            app:icon="@drawable/baseline_add_24"></com.google.android.material.button.MaterialButton>
+            android:layout_marginBottom="10dp"
+            android:text="@string/kenil"
+            app:icon="@drawable/baseline_alarm_add_24" />
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:id="@+id/alarm_show"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="40dp"
+        android:elevation="40dp"
+        android:visibility="gone"
+        android:layout_margin="20dp">
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:backgroundTint="#00cccc"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/set"
+            android:text="Start"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="130dp"
+            android:layout_marginEnd="10dp"/>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/set_alarm2"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#ccddff"
+        android:elevation="20dp"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/set_alarm"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="24dp"
+        android:visibility="invisible">
 
         <ImageView
-            android:id="@+id/imageViewz"
+            android:id="@+id/imageView2"
             android:layout_width="match_parent"
-            android:layout_height="158dp"
-            android:background="@color/black"
-            android:backgroundTint="@color/white"
+            android:layout_height="142dp"
+            android:scaleType="fitCenter"
+            android:background="@color/white"
             app:srcCompat="@drawable/alaram" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="160dp"
+            android:text="Create Alarm Time"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Alarm_set2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/kenil2"
+            app:icon="@drawable/baseline_alarm_off_24" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Alarm Time:"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:id="@+id/set_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="30dp"
+            android:textSize="20dp"
+            android:textStyle="bold" />
     </com.google.android.material.card.MaterialCardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
